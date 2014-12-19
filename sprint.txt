@@ -1,0 +1,14 @@
+DONE
+----
+
+DOING
+-----
+- make connect this to a database w appropriately defined models
+
+TODO
+---
+- move existing data from the population script to the database
+- load DB data in app on start
+- send upvotes from the client back to the server back to the other clients (sockets??)
+- include url parsing in replies
+- image embedding via upload and/or copy-paste
