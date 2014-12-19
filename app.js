@@ -6,7 +6,7 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , Models = require('./models')
-  , topic = require('./topic');
+  , controller = require('./controller');
 
 
 /**
@@ -41,14 +41,17 @@ function init(){
   /**
    * Routes for Topic REST API
    */
-  app.get('/topic', topic.list);
-  app.post('/topic', topic.new);
-  app.get('/topic/:tid', topic.get);
-  app.post('/topic/:tid/upvote', topic.upvote);
-  app.post('/topic/:tid/reply', topic.reply);
-  app.post('/topic/:tid/reply/:rid', topic.reply);
-  app.post('/topic/:tid/reply/:rid/upvote', topic.upvote);
-  app.get('/clear', topic.clear);
+  app.get('/topic', controller.list);
+  app.post('/topic', controller.new);
+  app.get('/topic/:tid', controller.get);
+  app.post('/topic/:tid/upvote', controller.upvote);
+  app.post('/topic/:tid/reply', controller.reply);
+  app.post('/topic/:tid/reply/:rid', controller.reply);
+  app.post('/topic/:tid/reply/:rid/upvote', controller.upvote);
+  app.get('/clear', controller.clear);
+
+  /* Inject Models */
+  controller.setModels(models);
 
   http.createServer(app).listen(app.get('port'), function(){
     console.log("Express server listening on port " + app.get('port'));
