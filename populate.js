@@ -1,10 +1,8 @@
 /**
  * Populate the Topic backend.
  */
-
-
 var request = require('request');
-apiUrl = 'http://localhost:31315';
+apiUrl = 'http://localhost:8080';
 
 /* The counter of currently active POST requests */
 var postCounter = 0;

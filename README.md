@@ -7,7 +7,8 @@ Requirements
 
   + Node.js
   + Request - (Used by `populate.js` to post topics / replies)
-  + Express - (__optional__, to be used with `app_express.js`)
+  + Sequlize
+  + MySQL
 
 Usage
 =====
@@ -18,7 +19,7 @@ Install Dependencies (Optional):
 
 Start Server:
 
-    $ node app
+    $ npm start
 
 Populate Data:
 
