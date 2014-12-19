@@ -27,7 +27,8 @@ function Models(init) {
     title: { type: Sequelize.STRING(140), allowNull: false},
     url: Sequelize.STRING,
     description: Sequelize.TEXT,
-    votes: { type: Sequelize.INTEGER, allowNull: false, defaultValue: 0}
+    votes: { type: Sequelize.INTEGER, allowNull: false, defaultValue: 0},
+    voteWeight: { type: Sequelize.INTEGER, allowNull: false, defaultValue: 0}
   });
 
   /* gives us Post#setParent, Post#getParent */
