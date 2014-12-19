@@ -1,6 +1,0 @@
-*.swp
-.idea
-.DS_Store
-node_modules
-*.sqlite
-*.db
